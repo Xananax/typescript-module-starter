@@ -1,0 +1,24 @@
+{
+    "files.exclude": {
+      ".gitignore": true,
+      ".npmignore": true,
+      ".vscode": true,
+      "**/.DS_Store": true,
+      "**/.git": true,
+      "**/.hg": true,
+      "**/.svn": true,
+      "**/*node_modules": true,
+      "**/CVS": true,
+      "index.js": true,
+      "LICENSE": true,
+      "package-lock.json": true,
+      "tsconfig.*": true,
+      "tslint.json": true
+    },
+    "editor.tabSize": 2,
+    "editor.renderWhitespace": "boundary",
+    "editor.detectIndentation": false,
+    "cSpell.words": [
+      "checkboxes"
+    ]
+  }

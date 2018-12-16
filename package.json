@@ -1,0 +1,61 @@
+{
+  "name": "back",
+  "version": "0.1.0",
+  "license": "MIT",
+  "main": "./dist/main.js",
+  "types": "./dist/main.d.ts",
+  "homepage": "https://Xananax.github.io/typescript-module-starter",
+  "author": "xananax@yelostudio.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Xananax/typescript-module-starter"
+  },
+  "bugs": {
+    "url": "https://github.com/Xananax/typescript-module-starter/issues"
+  },
+  "keywords": [
+    "utils",
+    "typescript"
+  ],
+  "dependencies": {},
+  "scripts": {
+    "demo:start": "BROWSER=none react-scripts start",
+    "demo:build": "react-scripts build",
+    "demo": "npm run demo:build",
+    "test": "react-scripts test --env=jsdom",
+    "package:build": "tsc --project tsconfig.package.json",
+    "package:clean": "rimraf ./dist",
+    "start": "npm run demo:start",
+    "dev:watch": "nodemon --signal SIGINT --ext ts,tsx --watch ./src --exec npm run dev:run",
+    "dev:run": "ts-node --project tsconfig.package.json src/main.ts",
+    "dev":"npm run dev:watch",
+    "package": "npm run package:clean && npm run package:build",
+    "pages:build": "npm run demo:build",
+    "pages:upload": "gh-pages -d build",
+    "pages": "npm run pages:build && npm run pages:upload",
+    "prepare": "npm test && npm run package && npm run pages",
+    "prepublishOnly": "npm run prepare"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "@types/jest": "^23.3.10",
+    "@types/node": "^10.12.15",
+    "@types/react": "^16.7.17",
+    "@types/react-dom": "^16.0.11",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "react-scripts": "2.1.1",
+    "gh-pages": "^2.0.1",
+    "rimraf": "^2.6.2",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.2.2"
+  }
+}
